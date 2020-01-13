@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Cadastro de Livro{% endblock %}
+
+{% block conteudo %}
+    <h3>Cadastro de Empresa</h3>
+    <p>Informe os dados de sua empresa:</p>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label>Nome Fantasia</label>
+        {{ form.nomeFantasia }}
+
+        <br>
+
+        <label>CNPJ</label>
+        {{ form.cnpj }}
+
+        <br>
+
+        <label>Quantidade de Funcionários</label>
+        {{ form.qnt_funcionarios }}
+
+        <br>
+
+        <label>Cidade</label>
+        {{ form.cidade }}
+
+        <br>
+
+        <label>Estado</label>
+        {{ form.estado }}
+
+        <br>
+
+        <button>CADASTRAR</button>
+
+
+    </form>
+
+    <p><a href="{% url 'index' %}">Cancelar</a></p>
+
+{% endblock %}	
+	
+	
+	

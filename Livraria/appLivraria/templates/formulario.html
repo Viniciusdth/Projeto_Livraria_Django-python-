@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div>
+    <p><a class="btn btn-default" href="{% url 'app_name_empresa_list' %}">Empresa Listing</a></p>
+    <form method="post">
+        {% csrf_token %}
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+
+     <form method="POST">
+         <button type="submit">Save</button>
+        {% csrf_token %}
+         {{ form.as_p }}
+
+        <label>nomeFantasia</label>
+        {{ form.nomeFantasia }}
+
+
+        <label>cnpj</label>
+        {{ form.cnpj }}
+
+
+        <label>qnt_funcionarios</label>
+        {{ form.qnt_funcionarios }}
+
+
+        <label>cidade</label>
+        {{ object.cidade }}
+
+
+        <label>estado</label>
+        {{ object.estado }}
+
+
+        <label>nome_completo</label>
+        {{ object.nome_completo }}
+
+
+        <label>login</label>
+        {{ object.login }}
+
+
+        <label>senha</label>
+        {{ object.senha }}
+
+
+        <label>nomeFantasia</label>
+        {{ object.nomeFantasia }}
+
+
+        <label>nome_fornecedor</label>
+        {{ object.nome_fornecedor }}
+
+
+        <label>alimentos</label>
+        {{ object.alimentos }}<
+
+
+        <label>quantidade</label>
+        {{ object.quantidade }}
+
+
+        <label>valor</label>
+        {{ object.valor }}
+
+
+        <label>peso</label>
+        {{ object.peso }}
+
+
+        <label>refeicoes</label>
+        {{ object.refeicoes }}
+
+
+        <label>data</label>
+        {{ object.data }}
+
+
+        <label>id_refeicao</label>
+        {{ object.id_refeicao }}
+
+
+        <label>qnt_func</label>
+        {{ object.qnt_func }}
+
+
+        <label>preferencia</label>
+        {{ object.preferencia }}
+
+
+        <label>menos_gosta</label>
+        {{ object.menos_gosta }}
+
+    </form>
+</div>
+{% endblock %}
